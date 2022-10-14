@@ -20,8 +20,6 @@ return new class extends Migration
             $table->date('tanggal_pengembalian')->nullable();
             $table->text('keterangan')->nullable();
             $table->enum('status',['Aman', 'Kurang', 'Terlambat',])->nullable();
-            $table->foreign('nomor_peminjaman')->references('idpeminjaman')->on('peminjamen')->onDelete('cascade');
-            $table->foreign('id_admin')->references('id')->on('admins')->onDelete('cascade');
             $table->timestamps();
         });
     }
