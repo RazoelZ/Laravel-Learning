@@ -27,7 +27,7 @@ Route::resource('/kembali', 'App\Http\Controllers\KembaliController')->middlewar
 Route::post('jabar', 'App\Http\Controllers\PengembalianController@jabar')->name('jabar')->middleware('auth');
 Route::resource('users', \App\Http\Controllers\UserController::class)
     ->middleware('auth');
-Auth::routes
+Auth::routes;
 
 Route::get('/home', function() {
     return view('home');
