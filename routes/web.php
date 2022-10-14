@@ -28,8 +28,9 @@ Route::post('jabar', 'App\Http\Controllers\PengembalianController@jabar')->name(
 Route::resource('users', \App\Http\Controllers\UserController::class)
     ->middleware('auth');
 Auth::routes([
-  'reset' => false, // Password Reset Routes...
-  'verify' => false, // Email Verification Routes...
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
 ]);
 
 Route::get('/home', function() {
