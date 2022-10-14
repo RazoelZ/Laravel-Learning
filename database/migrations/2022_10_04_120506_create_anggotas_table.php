@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
+            $table->string('id_anggota', 100)->nullable();
             $table->string('nama', 100)->nullable();
             $table->string('no_hp', 100)->nullable();
             $table->string('alamat', 100)->nullable();

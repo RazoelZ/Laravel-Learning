@@ -14,11 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('peminjamen', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->unsignedBigInteger('idpeminajaman')->autoIncrement();
             $table->unsignedBigInteger('nomor_peminjaman');
+            $table->unsignedBigInteger('aidi');
             $table->date('tanggal_pinjam')->nullable();
             $table->date('tanggal_kembali')->nullable();
             $table->date('lama')->nullable();
+            $table->enum('statuspeminjaman',['Sedang', 'Dikembalikan'])->nullable();
             $table->timestamps();
         });
     }

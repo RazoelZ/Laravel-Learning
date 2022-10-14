@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 40)->nullable();
-            $table->string('judul', 40)->nullable();
+            $table->string('judul', 255)->nullable();
+            $table->string('kategori', 255)->nullable();
             $table->string('pengarang', 40)->nullable();
             $table->string('tahun', 40)->nullable();
-            $table->string('jumlah')->nullable();
+            $table->string('jumlah', 299)->nullable();
             $table->timestamps();
             
         });
