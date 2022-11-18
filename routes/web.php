@@ -33,6 +33,6 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/home', function() {
+Route::get('/home', function () {
     return view('home');
 })->name('home')->middleware('auth');
